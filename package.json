@@ -1,0 +1,29 @@
+{
+  "name": "school about work",
+  "version": "1.0.0",
+  "description": "slide in school about work",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run server & npm run build:css -- --watch",
+    "server": "browser-sync start --server 'docs' --files 'docs/index.html, docs/css/*'",
+    "build:css": "postcss src/css/*.css --dir docs/css",
+    "lint:html": "markuplint docs/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masuP9/school-about-work.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masuP9/school-about-work/issues"
+  },
+  "homepage": "https://github.com/masuP9/school-about-work#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "markuplint": "^2.8.0",
+    "postcss-cli": "^10.0.0",
+    "postcss-easy-import": "^4.0.0",
+    "prettier": "^2.7.1"
+  }
+}
